@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="cabecalho">
+            <div class="logoapp">
+                DrivenEats
+            </div>
+            <div class="slogan">
+                Sua comida em 6 minutos
+            </div>
+        </header>
+        <main class="main">
+            <!--Painel confirmar pedido escondido-->
+            <div class="container-sobreposicao ocultar-container">
+                <div class="confirmar-pedido">
+                    <h2>Confirme seu pedido</h2>
+                    <div class="container-dois">
+                        <div class="itens">
+                            <p class="prato">batatinhafrita123</p>
+                            <p class="bebida">batatinhafrita123</p>
+                            <p class="sobremesa">batatinhafrita123</p>
+                            <p class="total">Valor total</p>
+                        </div>
+                        <div class="valores">
+                            <p class="valor-prato">batatinhafrita123</p>
+                            <p class="valor-bebida">batatinhafrita123</p>
+                            <p class="valor-sobremesa">batatinhafrita123</p>
+                            <p class="valor-total">Valor total</p>
+                        </div>
+                    </div>
+                    <div class="container-botoes">
+                        <button onclick="botaofecharPedido()" class="tudo-certo">Tudo certo, pode pedir!</button>
+                        <button onclick="cancelarPedido()" class="cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <!--Painel confirmar pedido escondido-->
+
+            <div class="displayParaPedidos">
+                <section>
+                    <h2>Primeiro, seu prato</h2>
+                    <article>
+                        <ul class="pratos">
+                            <li onclick="selecionarPrato(this)">
+                                <img src="/Imagens/lombinho.jpg" alt="lombinho">
+                                <h3>Lombinho</h3>
+                                <h4>Arroz, molho, feijão tropeiro e farofa</h4>
+                                <h5>R$ 20.40</h5>
+                            </li>
+                            <li onclick="selecionarPrato(this)">
+                                <img src="/Imagens/bife-ao-molho.jpg" alt="Bife ao molho">
+                                <h3>Bife ao molho</h3>
+                                <h4>Bife de alcatra, molho e Arroz</h4>
+                                <h5>R$ 24.90</h5>
+                                </lionadoPratos1>
+                            <li onclick="selecionarPrato(this)">
+                                <img src="/Imagens/feijoada.jpg" alt="Feijoada">
+                                <h3>Feijoada</h3>
+                                <h4>Feijoada, arroz, farofa e couve</h4>
+                                <h5>R$ 35.00</h5>
+                            </li>
+                            <li onclick="selecionarPrato(this)">
+                                <img src="/Imagens/file-de-peixe.jpg" alt="Filé de peixe">
+                                <h3>Filé de peixe</h3>
+                                <h4>Escabeche, acompanha arroz e purê de batata</h4>
+                                <h5>R$ 22,50</h5>
+                            </li>
+                            <li onclick="selecionarPrato(this)">
+                                <img src="/Imagens/bobo-de-camarao.jpg" alt="Bobó de camarão">
+                                <h3>Bobó de camarão</h3>
+                                <h4>Acompanha arroz e batata palha</h4>
+                                <h5>R$ 32,90</h5>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <h2>Agora, sua bebida</h2>
+                    <article>
+                        <ul class="bebidas">
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/coca-cola.jpg" alt="Coca cola">
+                                <h3>Coca cola</h3>
+                                <h4>Lata 350ml</h4>
+                                <h5>R$ 5.90</h5>
+                            </li>
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/fanta-laranja.jpg" alt="Fanta laranja">
+                                <h3>Fanta laranja</h3>
+                                <h4>Lata 350ml</h4>
+                                <h5>R$ 5.90</h5>
+                            </li>
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/fanta-uva.jpg" alt="Fanta uva">
+                                <h3>Fanta uva</h3>
+                                <h4>Lata 350ml</h4>
+                                <h5>R$ 5.90</h5>
+                            </li>
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/agua-tonica.jpg" alt="Água tônica">
+                                <h3>Água tônica</h3>
+                                <h4>Lata 350ml</h4>
+                                <h5>R$ 4,00</h5>
+                            </li>
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/aquarius-limao.jpg" alt="Aquárius limão">
+                                <h3>Aquárius limão</h3>
+                                <h4>Garrafa 500ml</h4>
+                                <h5>R$ 5,60</h5>
+                            </li>
+                            <li onclick="selecionarBebida(this)">
+                                <img src="/Imagens/guarana-antarctica.jpg" alt="Guaraná antarctica">
+                                <h3>Guaraná antarctica</h3>
+                                <h4>Lata 350ml</h4>
+                                <h5>R$ 5,90</h5>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <h2>Por fim, sua sobremesa</h2>
+                    <article>
+                        <ul class="sobremesas">
+                            <li onclick="selecionarSobremesa(this)">
+                                <img src="/Imagens/bwonie-casadinho.jpg" alt="Brownie casadinho">
+                                <h3>Brownie casadinho</h3>
+                                <h4>Chocolate e leite ninho</h4>
+                                <h5>R$ 8.00</h5>
+                            </li>
+                            <li onclick="selecionarSobremesa(this)">
+                                <img src="/Imagens/coxinha-chocolate.jpg" alt="Coxinha de chocolate">
+                                <h3>coxinha de chocolate</h3>
+                                <h4>Recheio de morango</h4>
+                                <h5>R$ 6.00</h5>
+                            </li>
+                            <li onclick="selecionarSobremesa(this)">
+                                <img src="/Imagens/pudim.jpg" alt="Pudim no pote">
+                                <h3>Pudim no pote</h3>
+                                <h4>Pudim tradicional</h4>
+                                <h5>R$ 7.50</h5>
+                            </li>
+                            <li onclick="selecionarSobremesa(this)">
+                                <img src="/Imagens/bolo-no-pote.jpg" alt="Bolo no pote">
+                                <h3>Bolo no pote</h3>
+                                <h4>Chocolate e coco</h4>
+                                <h5>R$ 12,00</h5>
+                                </limesas3>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+            <footer>
+                <button onclick="confirmarcaoPedido()" class="botaoFecharPedido" disabled="false">Selecione os 3 itens
+                    para fechar
+                    o pedido
+                </button>
+
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </div>
+</body>
+
+</html>
