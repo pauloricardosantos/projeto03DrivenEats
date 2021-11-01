@@ -101,20 +101,29 @@ function botaofecharPedido() {
     let valorFinal = parseFloat(pratoPreco.replace("R$", "")) + parseFloat(bebidaPreco.replace("R$", "")) + parseFloat(sobremesaPreco.replace("R$", ""))
     let valorFinalConfig = valorFinal.toFixed(2)
 
-    let mensagemEnvio =
-        `Olá, gostaria de fazer o pedido: 
-        - Prato: ${pratoSelecionado} 
-        - Bebida: ${bebidaSelecionado} 
-        - Sobremesa: ${sobremesaSelecionado} 
-        Valor total R$ ${valorFinalConfig} 
-        
-        -Nome do cliente: ${nomeCliente} 
-        -Endereço de entrega: ${enderecoCliente}`
-    alert(mensagemEnvio)
+    const mensagemConfirmacao = (
+        `Olá, gostaria de fazer o pedido: \n
+     - Prato: ${pratoSelecionado} \n
+     - Bebida: ${bebidaSelecionado} \n 
+     - Sobremesa: ${sobremesaSelecionado} \n
+     - Valor total: R$ ${valorFinalConfig} \n
 
-    window.open("https://wa.me/5575983734446?text=" + mensagemEnvio)
+     - Nome do cliente: ${nomeCliente} 
+     - Endereço de entrega: ${enderecoCliente}`)
+    alert(mensagemConfirmacao)
 
-    /*encodeURIComponent Está abrindo pop-up*/
+    const mensagemEnvio = encodeURIComponent
+        (`Olá, gostaria de fazer o pedido: \n
+     - Prato: ${pratoSelecionado} \n
+     - Bebida: ${bebidaSelecionado} \n 
+     - Sobremesa: ${sobremesaSelecionado} \n
+     - Valor total: R$ ${valorFinalConfig} \n
+
+     - Nome do cliente: ${nomeCliente} 
+     - Endereço de entrega: ${enderecoCliente}`)
+
+    const configURL = ("https://wa.me/5575983734446?text=" + mensagemEnvio)
+    window.open(configURL)
 
     const agradecimento = document.querySelector(".obrigado")
     agradecimento.classList.remove("ocultar")
