@@ -142,10 +142,9 @@ article ul li h5{
     position: absolute;
     right: 10px;
     bottom: 10px;
-}
-article ul li .icone-aceso{
     display: none;
 }
+
 footer{
     width: 414px;
     height: 92px;
@@ -198,10 +197,15 @@ footer button{
 
     color: #fff;
 }
-.bordaPrato,.bordaBebida,.bordaSobremesa, .elementox{
+.bordaPrato,.bordaBebida,.bordaSobremesa{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #00A296;
     border-radius: 9px;
 }
+.bordaPrato .icone,.bordaBebida .icone,.bordaSobremesa .icone{
+  display: initial;
+}
+
+
 /* tela de confirmação pedido*/
 .container-sobreposicao{
     width: 414px;

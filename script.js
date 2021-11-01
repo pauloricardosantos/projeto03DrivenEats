@@ -45,7 +45,6 @@ function fecharPedido() {
         botao.classList.add("pedido-fechado")
         botao.innerHTML = "Fechar pedido"
         botao.disabled = false
-
     }
 }
 function confirmarcaoPedido() {
