@@ -115,9 +115,24 @@ function botaofecharPedido() {
     window.open("https://wa.me/5575983734446?text=" + mensagemEnvio)
 
     /*encodeURIComponent Está abrindo pop-up*/
+
+    const agradecimento = document.querySelector(".obrigado")
+    agradecimento.classList.remove("ocultar")
+
 }
 function cancelarPedido() {
 
     const voltarTelaInicial = document.querySelector(".container-sobreposicao")
     voltarTelaInicial.classList.add("ocultar-container")
 }
+/*
+function voltarMenu() {
+    const voltarMenuinicial = document.querySelector(".obrigado")
+    voltarMenuinicial.classList.add("ocultar")
+
+    const voltarTelaInicial = document.querySelector(".container-sobreposicao")
+    voltarTelaInicial.classList.add("ocultar-container")
+}
+Posso usar essa função para voltar apenas uma tela ao invés de dar reload na página
+*/
+

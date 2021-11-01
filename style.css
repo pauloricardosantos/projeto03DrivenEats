@@ -298,7 +298,7 @@ footer button{
 /* tela de confirmação pedido*/
 
 
-/*Animação encontrata no CodePan, apenas modifiquei tamanho e posicionamento*/
+/*Animação encontrata no CodePan, apenas modifiquei tamanho, posicionamento e cores*/
 
 body{
     display: flex;justify-content: center;align-items: center;min-height: 100vh;
@@ -379,7 +379,7 @@ body{
   z-index: -1;
   width: 60%; height: 45%;
   border: 10px solid transparent;
-  border-bottom: 10px solid #ff2f2f;
+  border-bottom: 10px solid rgba(0, 162, 150, 1);
   border-radius: 50%;
   animation: loader 2s infinite;
   animation-timing-function: linear;
@@ -390,13 +390,13 @@ body{
 }
 .pan {
   width: 60%; height: 20px;
-  background: linear-gradient(#000, #333);
+  background: linear-gradient(#7b1fa2, #542169);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 .handle {
   width: 40%; height: 10px;
-  background: linear-gradient(#000, #333);
+  background: linear-gradient(#7b1fa2, #542169);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -406,9 +406,42 @@ body{
   position: relative;
   top: 15%; left: 15%;
   width: 30%; height: 8px;
-  background: lightgray;
+  background: #b39bbd;
   border-radius: 20px;
+  border: none;
   animation: shadow 2s infinite;
 }
 
-/*Animação encontrata no CodePan, apenas modifiquei tamanho e posicionamento*/
+/*Animação encontrata no CodePan, apenas modifiquei tamanho, posicionamento e cores*/
+
+.obrigado{
+  width: 414px;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+
+  background: #7b1fa2;
+
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: -0.012em;
+  color: rgba(255, 255, 255, 1);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 3;
+}
+.ocultar{
+  display: none;
+}
+.obrigado p{
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
